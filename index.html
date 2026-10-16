@@ -1,183 +1,217 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Christopher Sebastian is an independent architect and designer offering residential and commercial design services, with an international perspective and a focus on functional, thoughtfully designed spaces.">
-<title>Christopher Sebastian | Independent Architect & Designer</title>
+  <meta name="description" content="Christopher Sebastian is an independent architect and designer offering residential and commercial design services, with an international perspective and a focus on thoughtful, functional spaces.">
+  <meta name="theme-color" content="#202d32">
+  <title>Christopher Sebastian | Independent Architect &amp; Designer</title>
   <style>
+    :root {
+      --ink: #202d32;
+      --ink-soft: #405156;
+      --paper: #f5f1e9;
+      --white: #fffdf8;
+      --clay: #b7654b;
+      --clay-dark: #8f4c39;
+      --sage: #aeb9aa;
+      --sage-light: #e1e5dc;
+      --line: #d8d3c8;
+      --muted: #727a77;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      color: #252b29;
-      background: #f8f7f3;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.8;
-    }
-    header {
-      padding: 22px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #e5e2db;
-    }
-    .brand { font-size: 18px; font-weight: bold; letter-spacing: 1px; }
-    nav a {
-      color: #454b47;
-      text-decoration: none;
-      margin-left: 22px;
-      font-size: 14px;
-    }
-    .hero {
-      padding: 100px 8% 90px;
-      background: #e9e7df;
-    }
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      color: #68736b;
-    }
-    h1 {
-      font-size: clamp(38px, 6vw, 70px);
-      line-height: 1.12;
-      font-weight: 500;
-      max-width: 800px;
-      margin: 20px 0;
-    }
-    .hero p { max-width: 620px; font-size: 18px; }
-    section { padding: 65px 8%; }
-    h2 { font-size: 30px; font-weight: 500; margin-top: 0; }
-    .content { max-width: 850px; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
-    .item {
-      padding: 24px;
-      background: #eeece6;
-    }
-    .item h3 { margin-top: 0; font-size: 18px; }
-    .muted { color: #626963; }
-    footer {
-      padding: 30px 8%;
-      background: #252b29;
-      color: white;
-      font-size: 13px;
-    }
-    @media (max-width: 600px) {
-      header { align-items: flex-start; gap: 12px; flex-direction: column; }
-      nav a { margin: 0 15px 0 0; }
-      .hero { padding-top: 65px; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.6; }
+    a { color: inherit; }
+    .shell { width: min(1220px, calc(100% - 48px)); margin: 0 auto; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid var(--line); gap: 20px; }
+    .brand { font-family: var(--serif); font-size: 19px; letter-spacing: .02em; text-decoration: none; }
+    .brand span { display: block; font-family: var(--sans); font-size: 9px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+    nav { display: flex; gap: 28px; flex-wrap: wrap; }
+    nav a { text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--ink-soft); }
+    nav a:hover, .text-link:hover { color: var(--clay-dark); }
+    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(35px, 7vw, 100px); align-items: center; padding: 74px 0 84px; }
+    .eyebrow { color: var(--clay-dark); text-transform: uppercase; letter-spacing: .2em; font-size: 10px; font-weight: 700; margin-bottom: 22px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-family: var(--serif); font-size: clamp(48px, 6.4vw, 88px); line-height: .99; letter-spacing: -.055em; font-weight: 400; margin-bottom: 27px; }
+    h1 em { color: var(--clay); font-weight: 400; }
+    .intro { color: var(--ink-soft); max-width: 520px; font-size: 16px; line-height: 1.85; }
+    .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; margin-top: 30px; }
+    .button { display: inline-block; padding: 13px 19px; text-decoration: none; font-size: 11px; text-transform: uppercase; letter-spacing: .12em; border: 1px solid var(--ink); transition: .2s ease; }
+    .button.primary { background: var(--ink); color: var(--white); }
+    .button.primary:hover { background: var(--clay-dark); border-color: var(--clay-dark); }
+    .button.secondary:hover { background: var(--sage-light); }
+    .portrait-wrap { position: relative; max-width: 440px; justify-self: end; width: 100%; }
+    .portrait-wrap::before { content: ""; position: absolute; background: var(--sage); inset: 20px -18px -18px 18px; }
+    .portrait { position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 28%; background: var(--sage-light); }
+    .portrait-note { position: absolute; right: -18px; bottom: 20px; writing-mode: vertical-rl; transform: rotate(180deg); color: var(--ink); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; }
+    .ticker { background: var(--ink); color: var(--white); padding: 18px 0; }
+    .ticker-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-size: 10px; text-transform: uppercase; letter-spacing: .17em; }
+    .section { padding: 86px 0; }
+    .section-head { display: grid; grid-template-columns: .8fr 1.2fr; gap: 45px; align-items: start; margin-bottom: 35px; }
+    .section-label { color: var(--clay-dark); font-size: 10px; text-transform: uppercase; letter-spacing: .2em; font-weight: 700; }
+    h2 { font-family: var(--serif); font-size: clamp(34px, 4vw, 54px); line-height: 1.08; font-weight: 400; letter-spacing: -.04em; margin: 9px 0 0; }
+    .section-lede { color: var(--ink-soft); max-width: 600px; font-size: 14px; line-height: 1.9; }
+    .about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(35px, 7vw, 100px); align-items: start; }
+    .about-panel { background: var(--sage-light); padding: 32px; border-left: 3px solid var(--clay); }
+    .about-panel p { font-family: var(--serif); font-size: 24px; line-height: 1.4; margin-bottom: 0; }
+    .about-copy { color: var(--ink-soft); font-size: 14px; }
+    .about-copy p { margin-bottom: 18px; }
+    .practice { background: var(--white); }
+    .practice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 35px; }
+    .practice-card { background: var(--white); padding: 28px; min-height: 210px; }
+    .number { color: var(--clay); font-family: var(--serif); font-size: 26px; }
+    .practice-card h3 { font-family: var(--serif); font-size: 24px; font-weight: 400; margin: 19px 0 10px; }
+    .practice-card p { color: var(--muted); font-size: 13px; margin: 0; }
+    .projects { background: #e8e4db; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 35px; }
+    .project-card { background: var(--white); border: 1px solid #d7d2c8; }
+    .project-visual { min-height: 220px; padding: 24px; background: linear-gradient(135deg, #d8ddd4, #b8c2b9); display: flex; align-items: end; position: relative; overflow: hidden; }
+    .project-visual::before, .project-visual::after { content: ""; position: absolute; bottom: 0; }
+    .project-visual::before { left: 12%; width: 48%; height: 78%; background: rgba(255,253,248,.72); border: 1px solid rgba(32,45,50,.16); box-shadow: 18px 0 0 rgba(32,45,50,.08); }
+    .project-visual::after { right: 10%; width: 22%; height: 58%; background: rgba(32,45,50,.68); border: 7px solid rgba(255,253,248,.55); }
+    .project-visual.v2 { background: linear-gradient(140deg, #d9c8b4, #b8795c); }
+    .project-visual.v2::before { height: 60%; width: 65%; left: 8%; background: rgba(255,253,248,.76); transform: skewY(-5deg); }
+    .project-visual.v2::after { height: 70%; width: 18%; right: 9%; background: rgba(32,45,50,.74); }
+    .project-visual.v3 { background: linear-gradient(135deg, #bdc9c1, #7c9187); }
+    .project-visual.v3::before { height: 86%; width: 38%; left: 10%; background: rgba(255,253,248,.72); }
+    .project-visual.v3::after { height: 45%; width: 30%; right: 10%; background: rgba(32,45,50,.72); }
+    .visual-label { position: relative; z-index: 1; background: var(--ink); color: var(--white); padding: 6px 9px; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
+    .project-info { padding: 21px 22px 23px; }
+    .project-info h3 { font-family: var(--serif); font-size: 22px; font-weight: 400; margin-bottom: 8px; }
+    .project-info p { font-size: 12px; color: var(--muted); margin-bottom: 0; }
+    .project-note { margin-top: 24px; padding: 16px 18px; background: rgba(255,253,248,.65); border-left: 3px solid var(--clay); font-size: 12px; color: var(--ink-soft); }
+    .education-grid { display: grid; grid-template-columns: .65fr 1.35fr; gap: 45px; }
+    .education-box { border-top: 1px solid var(--line); padding-top: 20px; }
+    .education-box h3 { font-family: var(--serif); font-size: 25px; font-weight: 400; margin-bottom: 8px; }
+    .education-box p { color: var(--muted); font-size: 13px; }
+    .contact { background: var(--ink); color: var(--white); }
+    .contact .section-label { color: #d9a28f; }
+    .contact h2 { max-width: 700px; }
+    .contact-row { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-top: 28px; }
+    .contact-row p { color: #d1d8d4; max-width: 510px; font-size: 14px; }
+    .contact .button { border-color: var(--white); color: var(--white); }
+    .contact .button:hover { background: var(--white); color: var(--ink); }
+    footer { background: #172226; color: #c5ceca; padding: 22px 0; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .text-link { text-decoration: underline; text-decoration-color: var(--clay); text-underline-offset: 4px; }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 32px, 600px); }
+      .topbar { align-items: flex-start; }
+      nav { gap: 13px; justify-content: flex-end; }
+      nav a { font-size: 9px; }
+      .hero, .section-head, .about-grid, .education-grid { grid-template-columns: 1fr; }
+      .hero { padding: 52px 0 62px; gap: 42px; }
+      .portrait-wrap { justify-self: center; width: min(88%, 390px); }
+      .section { padding: 60px 0; }
+      .section-head { gap: 17px; }
+      .practice-grid, .project-grid { grid-template-columns: 1fr; }
+      .project-visual { min-height: 245px; }
+      .contact-row { align-items: flex-start; flex-direction: column; }
+      .ticker-inner { justify-content: flex-start; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="brand">CHRISTOPHER SEBASTIAN</div>
-    <nav>
+  <header class="shell topbar">
+    <a class="brand" href="#top">Christopher Sebastian<span>Independent Architect &amp; Designer</span></a>
+    <nav aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#practice">Practice</a>
+      <a href="#projects">Projects</a>
       <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="eyebrow">Independent Architect & Designer</div>
-      <h1>Christopher Sebastian<br>Independent Architect & Designer</h1>
-      <p>
-        Residential and commercial design shaped by creative thinking,
-        practical planning, and an appreciation for the way people
-        experience the spaces around them.
-      </p>
-    </section>
-
-    <section id="about">
-      <div class="content">
-        <div class="eyebrow">About Christopher</div>
-        <h2>Professional Biography</h2>
-        <p>
-          Christopher Sebastian is an independent architect and designer
-          specializing in residential and commercial design. His
-          international background spans Italy, New Zealand, Singapore,
-          Germany, and the United States, informing his appreciation for
-          different cultures, environments, and approaches to design.
-        </p>
-        <p>
-          Working directly with clients in the United States, Christopher
-          develops design solutions that balance creative vision,
-          functionality, spatial planning, and attention to detail.
-          His approach focuses on understanding each client's needs and
-          translating their ideas into thoughtful, practical spaces.
-        </p>
+  <main id="top">
+    <section class="shell hero">
+      <div>
+        <div class="eyebrow">Independent practice · Residential &amp; commercial</div>
+        <h1>Spaces with<br><em>purpose.</em><br>Design with care.</h1>
+        <p class="intro">Christopher Sebastian is an independent architect and designer focused on thoughtful spaces that balance function, character, and the way people live and work.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">Explore selected work</a>
+          <a class="button secondary" href="#about">Meet Christopher</a>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <img class="portrait" src="images/christopher-sebastian.jpg" alt="Professional portrait of Christopher Sebastian, independent architect and designer">
+        <div class="portrait-note">Architecture · Design · Perspective</div>
       </div>
     </section>
 
-    <section id="practice">
-      <div class="eyebrow">Areas of Focus</div>
-      <h2>Design Practice</h2>
-      <div class="grid">
-        <div class="item">
-          <h3>Residential Design</h3>
-          <p class="muted">
-            Thoughtful living spaces planned around daily life,
-            functionality, and individual client needs.
-          </p>
-        </div>
-        <div class="item">
-          <h3>Commercial Design</h3>
-          <p class="muted">
-            Practical and considered spaces that respond to their
-            intended purpose and users.
-          </p>
-        </div>
-        <div class="item">
-          <h3>Design Development</h3>
-          <p class="muted">
-            Collaborative exploration of ideas, spatial planning,
-            and solutions that balance appearance with usability.
-          </p>
+    <div class="ticker"><div class="shell ticker-inner"><span>Residential design</span><span>Commercial spaces</span><span>Thoughtful planning</span><span>International perspective</span></div></div>
+
+    <section class="shell section" id="about">
+      <div class="section-head">
+        <div><div class="section-label">01 / About</div><h2>Design begins<br>with people.</h2></div>
+        <p class="section-lede">Good design is more than appearance. It brings together practical needs, the character of a place, and the small details that make a space work beautifully every day.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-panel"><p>“Thoughtful design. Practical solutions. Spaces made to be lived in.”</p></div>
+        <div class="about-copy">
+          <p>Christopher Sebastian is an independent architect and designer working across residential and commercial design. His approach combines creative thinking with practical planning and a close attention to how people experience the spaces around them.</p>
+          <p>With an international outlook shaped by living and studying in different parts of the world, Christopher values clear communication, considered decisions, and design that responds to each client's needs and the context of each project.</p>
+          <p>Every project begins with listening: understanding the brief, exploring possibilities, and working toward a result that feels both purposeful and enduring.</p>
         </div>
       </div>
     </section>
 
-    <section id="education">
-      <div class="content">
-        <div class="eyebrow">Academic Background</div>
-        <h2>Education & Design Perspective</h2>
-        <p>
-          Christopher pursued architectural studies at the University
-          of Auckland in New Zealand. His academic experience helped
-          develop his design perspective, creative thinking, and
-          approach to architectural problem-solving.
-        </p>
-        <p>
-          His design philosophy emphasizes clear communication,
-          professional responsibility, functional planning, and
-          spaces that unite visual quality with practical purpose.
-        </p>
+    <section class="practice section" id="practice">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="section-label">02 / Practice</div><h2>A considered<br>approach.</h2></div>
+          <p class="section-lede">A collaborative process helps translate ideas into clear design directions, balancing aesthetics, function, and the realities of each brief.</p>
+        </div>
+        <div class="practice-grid">
+          <article class="practice-card"><div class="number">01</div><h3>Residential design</h3><p>Homes and living spaces shaped around the people who use them, with attention to flow, comfort, proportion, and detail.</p></article>
+          <article class="practice-card"><div class="number">02</div><h3>Commercial design</h3><p>Workplace and commercial environments planned to support how people move, interact, and carry out their daily work.</p></article>
+          <article class="practice-card"><div class="number">03</div><h3>Design development</h3><p>Turning early ideas into more resolved concepts through thoughtful planning, visual exploration, and practical problem-solving.</p></article>
+        </div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="content">
-        <div class="eyebrow">Professional Enquiries</div>
-        <h2>Let's discuss your project.</h2>
-        <p>
-          For enquiries regarding residential or commercial design,
-          please connect through your preferred professional contact
-          channel.
-        </p>
+    <section class="projects section" id="projects">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="section-label">03 / Portfolio</div><h2>Selected work<br>&amp; design studies.</h2></div>
+          <p class="section-lede">A portfolio should tell the story of the work clearly. This gallery is ready for project photographs, drawings, and case studies as you provide them.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card"><div class="project-visual"><span class="visual-label">Image to be added</span></div><div class="project-info"><h3>Residential architecture</h3><p>Reserved for a residential project you have worked on. We will add its location, description, and your role once confirmed.</p></div></article>
+          <article class="project-card"><div class="project-visual v2"><span class="visual-label">Image to be added</span></div><div class="project-info"><h3>Commercial environment</h3><p>Reserved for a commercial project or interior design work, with accurate project details to follow.</p></div></article>
+          <article class="project-card"><div class="project-visual v3"><span class="visual-label">Image to be added</span></div><div class="project-info"><h3>Concept &amp; development</h3><p>Reserved for sketches, plans, renderings, or design studies that demonstrate your process.</p></div></article>
+        </div>
+        <div class="project-note"><strong>Portfolio note:</strong> The graphic panels above are temporary design placeholders, not photographs of completed projects. We will replace them with authentic project images before presenting them as your work.</div>
+      </div>
+    </section>
+
+    <section class="shell section" id="education">
+      <div class="section-head">
+        <div><div class="section-label">04 / Education</div><h2>Learning that<br>shapes perspective.</h2></div>
+        <p class="section-lede">An international background informs Christopher's interest in the relationship between place, people, and the built environment.</p>
+      </div>
+      <div class="education-grid">
+        <div class="education-box"><div class="section-label">Architectural studies</div></div>
+        <div class="education-box"><h3>University of Auckland</h3><p>New Zealand</p><p>Christopher pursued architectural studies at the University of Auckland. Further qualifications and professional registrations can be added here if applicable and verified.</p></div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="shell">
+        <div class="section-label">05 / Contact</div>
+        <h2>Have a project<br>in mind?</h2>
+        <div class="contact-row">
+          <p>For project enquiries or professional conversations, please get in touch. Add your preferred professional email address or contact link here when you're ready.</p>
+          <a class="button" href="mailto:">Add contact email</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    © 2026 Christopher Sebastian · Independent Architect & Designer
-  </footer>
+  <footer><div class="shell footer-inner"><span>© <span id="year">2026</span> Christopher Sebastian</span><span>Independent Architect &amp; Designer</span></div></footer>
 </body>
 </html>
