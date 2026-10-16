@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Christopher Sebastian is an independent architect and designer specializing in residential and commercial design.">
+  <title>Christopher Sebastian | Architect & Designer</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #252b29;
+      background: #f8f7f3;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.8;
+    }
+    header {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5e2db;
+    }
+    .brand { font-size: 18px; font-weight: bold; letter-spacing: 1px; }
+    nav a {
+      color: #454b47;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+    .hero {
+      padding: 100px 8% 90px;
+      background: #e9e7df;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      color: #68736b;
+    }
+    h1 {
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1.12;
+      font-weight: 500;
+      max-width: 800px;
+      margin: 20px 0;
+    }
+    .hero p { max-width: 620px; font-size: 18px; }
+    section { padding: 65px 8%; }
+    h2 { font-size: 30px; font-weight: 500; margin-top: 0; }
+    .content { max-width: 850px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .item {
+      padding: 24px;
+      background: #eeece6;
+    }
+    .item h3 { margin-top: 0; font-size: 18px; }
+    .muted { color: #626963; }
+    footer {
+      padding: 30px 8%;
+      background: #252b29;
+      color: white;
+      font-size: 13px;
+    }
+    @media (max-width: 600px) {
+      header { align-items: flex-start; gap: 12px; flex-direction: column; }
+      nav a { margin: 0 15px 0 0; }
+      .hero { padding-top: 65px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">CHRISTOPHER SEBASTIAN</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#practice">Practice</a>
+      <a href="#education">Education</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Independent Architect & Designer</div>
+      <h1>Thoughtful design.<br>Purposeful spaces.</h1>
+      <p>
+        Residential and commercial design shaped by creative thinking,
+        practical planning, and an appreciation for the way people
+        experience the spaces around them.
+      </p>
+    </section>
+
+    <section id="about">
+      <div class="content">
+        <div class="eyebrow">About Christopher</div>
+        <h2>Professional Biography</h2>
+        <p>
+          Christopher Sebastian is an independent architect and designer
+          specializing in residential and commercial design. His
+          international background spans Italy, New Zealand, Singapore,
+          Germany, and the United States, informing his appreciation for
+          different cultures, environments, and approaches to design.
+        </p>
+        <p>
+          Working directly with clients in the United States, Christopher
+          develops design solutions that balance creative vision,
+          functionality, spatial planning, and attention to detail.
+          His approach focuses on understanding each client's needs and
+          translating their ideas into thoughtful, practical spaces.
+        </p>
+      </div>
+    </section>
+
+    <section id="practice">
+      <div class="eyebrow">Areas of Focus</div>
+      <h2>Design Practice</h2>
+      <div class="grid">
+        <div class="item">
+          <h3>Residential Design</h3>
+          <p class="muted">
+            Thoughtful living spaces planned around daily life,
+            functionality, and individual client needs.
+          </p>
+        </div>
+        <div class="item">
+          <h3>Commercial Design</h3>
+          <p class="muted">
+            Practical and considered spaces that respond to their
+            intended purpose and users.
+          </p>
+        </div>
+        <div class="item">
+          <h3>Design Development</h3>
+          <p class="muted">
+            Collaborative exploration of ideas, spatial planning,
+            and solutions that balance appearance with usability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="content">
+        <div class="eyebrow">Academic Background</div>
+        <h2>Education & Design Perspective</h2>
+        <p>
+          Christopher pursued architectural studies at the University
+          of Auckland in New Zealand. His academic experience helped
+          develop his design perspective, creative thinking, and
+          approach to architectural problem-solving.
+        </p>
+        <p>
+          His design philosophy emphasizes clear communication,
+          professional responsibility, functional planning, and
+          spaces that unite visual quality with practical purpose.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="content">
+        <div class="eyebrow">Professional Enquiries</div>
+        <h2>Let's discuss your project.</h2>
+        <p>
+          For enquiries regarding residential or commercial design,
+          please connect through your preferred professional contact
+          channel.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Christopher Sebastian · Independent Architect & Designer
+  </footer>
+</body>
+</html>
