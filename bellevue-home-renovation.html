@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bellevue Kitchen Renovation | Christopher Sebastian</title>
+
+  <meta name="description" content="Explore a kitchen renovation in Bellevue, Washington, featuring a vaulted ceiling, skylights, custom walnut cabinetry, a generous island, and warm natural finishes by Christopher Sebastian, Independent Architect & Designer.">
+
+  <style>
+    :root {
+      --ivory: #f5f1e9;
+      --paper: #fffdf8;
+      --charcoal: #302f2b;
+      --sage: #7b8875;
+      --terracotta: #b86e53;
+      --muted: #716e65;
+      --line: #ded8cc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      padding: 24px 6%;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+
+    .back-link {
+      color: var(--sage);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--terracotta);
+    }
+
+    main {
+      max-width: 1180px;
+      width: 88%;
+      margin: 0 auto;
+    }
+
+    .project-intro {
+      max-width: 850px;
+      padding: 65px 0 35px;
+    }
+
+    .eyebrow {
+      color: var(--terracotta);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 12px 0 15px;
+      font-size: clamp(36px, 5vw, 58px);
+    }
+
+    .location {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin-top: 25px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .hero-image {
+      width: 100%;
+      display: block;
+      max-height: 680px;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+
+    .gallery-caption {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .project-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(220px, 0.8fr);
+      gap: 65px;
+      padding: 65px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-content h2,
+    .gallery-heading h2 {
+      margin-top: 0;
+      font-size: 32px;
+    }
+
+    .project-content p {
+      margin: 0 0 20px;
+    }
+
+    .project-details {
+      padding: 25px;
+      background: var(--paper);
+      align-self: start;
+    }
+
+    .project-details h3 {
+      margin-top: 0;
+      font-size: 23px;
+    }
+
+    .detail-item {
+      padding: 13px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .detail-label {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .detail-value {
+      font-size: 14px;
+    }
+
+    .gallery {
+      padding: 65px 0 80px;
+    }
+
+    .gallery-heading {
+      max-width: 720px;
+      margin-bottom: 30px;
+    }
+
+    .gallery-heading p {
+      color: var(--muted);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .gallery-item {
+      min-width: 0;
+      margin: 0;
+      background: var(--paper);
+      padding-bottom: 15px;
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+    }
+
+    .gallery-item figcaption {
+      padding: 12px 16px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .gallery-item.featured {
+      grid-column: 1 / -1;
+    }
+
+    .gallery-item.featured img {
+      height: auto;
+      max-height: 650px;
+      object-fit: cover;
+    }
+
+    .closing {
+      padding: 40px 0 65px;
+      text-align: center;
+    }
+
+    .closing p {
+      color: var(--muted);
+    }
+
+    .closing a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 24px;
+      background: var(--sage);
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+
+    .closing a:hover {
+      background: var(--terracotta);
+    }
+
+    footer {
+      padding: 25px 6%;
+      background: var(--charcoal);
+      color: #f5f1e9;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        width: 90%;
+      }
+
+      .project-intro {
+        padding-top: 42px;
+      }
+
+      .project-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 45px 0;
+      }
+
+      .gallery {
+        padding: 45px 0;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .gallery-item.featured {
+        grid-column: auto;
+      }
+
+      .gallery-item img {
+        height: auto;
+        max-height: 430px;
+      }
+
+      .gallery-item.featured img {
+        height: auto;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        Christopher Sebastian
+        <span>Independent Architect &amp; Designer</span>
+      </div>
+
+      <a class="back-link" href="index.html#projects">
+        ← Back to Portfolio
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="project-intro">
+      <div class="eyebrow">Residential Architecture</div>
+
+      <h1>Bellevue Kitchen Renovation</h1>
+
+      <div class="location">Bellevue, Washington</div>
+
+      <p class="lead">
+        A thoughtful transformation of a 1960s split-entry home,
+        reimagining an underused kitchen and adjoining spaces as a
+        welcoming, light-filled heart of the home.
+      </p>
+    </section>
+
+    <section aria-label="Featured project photograph">
+      <img
+        class="hero-image"
+        src="images/bellevue-home-renovation-kitchen-skylights-clerestory-wc-studio.webp"
+        alt="Renovated Bellevue kitchen with vaulted ceiling, skylights and custom cabinetry"
+        onerror="this.style.display='none';"
+      >
+      <p class="gallery-caption">
+        Natural light, open volume and warm materials define the renovated kitchen.
+      </p>
+    </section>
+
+    <section class="project-content">
+
+      <article>
+        <h2>Reimagining the Heart of the Home</h2>
+
+        <p>
+          This renovation reconfigured the existing kitchen to create a
+          more generous and connected living environment. Removing two
+          walls opened the kitchen and dining area into an underused
+          adjoining room, strengthening the relationship with the living
+          room and improving the flow between everyday activities.
+        </p>
+
+        <p>
+          Above, a vaulted ceiling makes use of previously unused attic
+          space, giving the kitchen a greater sense of height and openness.
+          Two skylights introduce natural daylight, helping the interior
+          feel brighter and more inviting throughout the day.
+        </p>
+
+        <h2>Warm Materials and Thoughtful Details</h2>
+
+        <p>
+          Custom walnut cabinetry establishes a rich natural character,
+          balanced by light quartz countertops and a Heath Ceramics
+          backsplash. A walnut butcher-block bar top adds another layer
+          of warmth, while a generous kitchen island provides a practical
+          centre for food preparation, informal dining and gathering.
+        </p>
+
+        <p>
+          A custom steel chimney wrap and gas fireplace insert contribute
+          a refined focal point. Engineered hardwood flooring replaces
+          the former carpet and linoleum, while updated trim, paint and
+          lighting bring consistency to the renewed interior.
+        </p>
+
+        <p>
+          The result is a more cohesive and functional home, shaped around
+          natural light, comfortable movement, durable finishes and the
+          simple pleasure of spending time together.
+        </p>
+      </article>
+
+      <aside class="project-details">
+        <h3>Project Overview</h3>
+
+        <div class="detail-item">
+          <span class="detail-label">Project Type</span>
+          <span class="detail-value">Residential Renovation</span>
+        </div>
+
+        <div class="detail-item">
+          <span class="detail-label">Location</span>
+          <span class="detail-value">Bellevue, Washington</span>
+        </div>
+
+        <div class="detail-item">
+          <span class="detail-label">Original Home</span>
+          <span class="detail-value">1960s Split-Entry</span>
+        </div>
+
+        <div class="detail-item">
+          <span class="detail-label">Design Focus</span>
+          <span class="detail-value">
+            Spatial flow, natural light, material warmth and everyday living
+          </span>
+        </div>
+
+        <div class="detail-item">
+          <span class="detail-label">Key Features</span>
+          <span class="detail-value">
+            Vaulted ceiling, skylights, walnut cabinetry and kitchen island
+          </span>
+        </div>
+      </aside>
+
+    </section>
+
+    <section class="gallery">
+      <div class="gallery-heading">
+        <div class="eyebrow">Project Gallery</div>
+        <h2>Details of the Transformation</h2>
+        <p>
+          A closer look at the cabinetry, work surfaces and design details
+          that bring warmth and functionality to the renovated kitchen.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <figure class="gallery-item">
+          <img
+            src="images/bellevue-home-renovation-kitchen-coffee-station-wc-studio.webp"
+            alt="Custom kitchen coffee station with warm cabinetry and considered storage"
+            loading="lazy"
+          >
+          <figcaption>
+            A dedicated coffee station with integrated storage.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="images/bellevue-home-renovation-kitchen-island-boos-block-wc-studio.webp"
+            alt="Kitchen island featuring a warm walnut butcher-block work surface"
+            loading="lazy"
+          >
+          <figcaption>
+            Walnut butcher-block detailing adds warmth and texture.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="images/bellevue-home-renovation-kitchen-island-cabinets-wc-studio.webp"
+            alt="Kitchen island and custom cabinetry in the Bellevue renovation"
+            loading="lazy"
+          >
+          <figcaption>
+            Custom cabinetry and island storage support everyday use.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="images/bellevue-home-renovation-kitchen-island-wc-studio.webp"
+            alt="Generous kitchen island with coordinated cabinets and countertops"
+            loading="lazy"
+          >
+          <figcaption>
+            A generous island creates a practical centre for cooking and gathering.
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Explore More Work</h2>
+      <p>Return to the portfolio to explore more architectural design work.</p>
+      <a href="index.html#projects">Back to Portfolio</a>
+    </section>
+
+  </main>
+
+  <footer>
+    © Christopher Sebastian | Independent Architect &amp; Designer
+  </footer>
+
+</body>
+</html>
